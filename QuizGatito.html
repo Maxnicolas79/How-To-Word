@@ -15,89 +15,117 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Quizz do gatito sapeca</title>
+    <title>Quizz do Gatito</title>
+    <script as="script" src="src/script.js"></script>
   </head>
   <body>
     <div class="questoes">
-      <div class="pergunta">
-        Q1. Qual respectivo icone é o de "Negrito"<br />
-        <div class="respostas">
-          <input type="radio" name="question1" class="correct" /><b>N</b> <br />
-          <input type="radio" name="question1" /><i>I</i> <br />
-          <input type="radio" name="question1" /><u>S</u> <br />
-          <input type="radio" name="question1" /><s>ab</s> <br />
-          <br />
+      <img src="gato.png" alt="Gatito" id="Gatito" />
+      <div class="pergunta" id="P1">
+        <div class="balao">
+          <h3>Q1. Qual respectivo icone é o de "Negrito"?</h3>
+          <div class="respostas">
+            <input type="radio" name="question1" class="correct" /><b>N</b>
+            <br />
+            <input type="radio" name="question1" /><i>i</i> <br />
+            <input type="radio" name="question1" /><u>s</u> <br />
+            <input type="radio" name="question1" /><s>ab</s> <br />
+            <br />
+          </div>
 
           <div class="options">
             <button><a href="index.html">Voltar</a></button>
-            <button>Próxima Pergunta</button>
+            <button onclick="navigate('next')">Próxima Pergunta</button>
           </div>
         </div>
       </div>
 
-      <div class="pergunta hidden">
-        Q2. Qual símbolo corresponde ao "Justificar"<br />
-        <input type="radio" name="question2" /><i
-          class="fa-solid fa-align-right"
-        ></i>
-        <br />
-        <input type="radio" name="question2" /><i
-          class="fa-solid fa-align-left"
-        ></i>
-        <br />
-        <input type="radio" name="question2" class="correct" /><i
-          class="fa-solid fa-align-justify"
-        ></i>
-        <br />
-        <input type="radio" name="question2" /><i
-          class="fa-solid fa-align-center"
-        ></i>
-        <br />
+      <div class="pergunta hidden" id="P2">
+        <div class="balao">
+          <h3>Q2. Qual símbolo corresponde ao "Justificar"?</h3>
+
+          <input type="radio" name="question2" /><i
+            class="fa-solid fa-align-right"
+          ></i>
+
+          <input type="radio" name="question2" /><i
+            class="fa-solid fa-align-left"
+          ></i>
+
+          <input type="radio" name="question2" class="correct" /><i
+            class="fa-solid fa-align-justify"
+          ></i>
+
+          <input type="radio" name="question2" /><i
+            class="fa-solid fa-align-center"
+          ></i>
+          <br />
+
+          <div class="options">
+            <button onclick="navigate('back')">Voltar</button>
+            <button onclick="navigate('next')">Próxima Pergunta</button>
+          </div>
+        </div>
       </div>
 
-      <div class="pergunta hidden">
-        Q3. Qual símbolo é o de "Numeração"?<br />
-        <input type="radio" name="question3" /><i
-          class="fa-solid fa-list-ul"
-        ></i>
-        <br />
-        <input type="radio" name="question3" class="correct" /><i
-          class="fa-solid fa-list-ol"
-        ></i>
-        <br />
-        <input type="radio" name="question3" /><i class="fa-solid fa-font"></i>
-        <br />
-        <input type="radio" name="question3" /><s>ab</s> <br />
+      <div class="pergunta hidden" id="P3">
+        <div class="balao">
+          <h3>Q3. Qual símbolo é o de "Numeração"?</h3>
+
+          <input type="radio" name="question3" /><i
+            class="fa-solid fa-list-ul"
+          ></i>
+
+          <input type="radio" name="question3" class="correct" /><i
+            class="fa-solid fa-list-ol"
+          ></i>
+
+          <input type="radio" name="question3" /><i
+            class="fa-solid fa-font"
+          ></i>
+
+          <input type="radio" name="question3" /><s>ab</s> <br />
+
+          <div class="options">
+            <button onclick="navigate('back')">Voltar</button>
+            <button onclick="navigate('next')">Próxima Pergunta</button>
+          </div>
+        </div>
       </div>
 
-      <div class="pergunta hidden">
-        Q4. Qual símbolo indica paragráfo?<br />
-        <input type="radio" name="question4" /><i class="fa-solid fa-font"></i>
-        <br />
-        <input type="radio" name="question4" /><i
-          class="fa-solid fa-list-ul"
-        ></i>
-        <br />
-        <input type="radio" name="question4" /><i
-          class="fa-solid fa-border-all"
-        ></i>
-        <br />
-        <input type="radio" name="question4" class="correct" /><i
-          class="fa-solid fa-paragraph"
-        ></i>
-        <br />
+      <div class="pergunta hidden" id="P4">
+        <div class="balao">
+          <h3>Q4. Qual símbolo indica paragráfo?</h3>
+
+          <input type="radio" name="question4" /><i
+            class="fa-solid fa-font"
+          ></i>
+
+          <input type="radio" name="question4" /><i
+            class="fa-solid fa-list-ul"
+          ></i>
+
+          <input type="radio" name="question4" /><i
+            class="fa-solid fa-border-all"
+          ></i>
+
+          <input type="radio" name="question4" class="correct" /><i
+            class="fa-solid fa-paragraph"
+          ></i>
+          <br />
+
+          <div class="options">
+            <button onclick="navigate('back')">Voltar</button>
+            <input
+              type="submit"
+              name="submit"
+              value="Enviar Resposta"
+              onClick="result()"
+            />
+            <button><a href="index.html">Voltar ao Menu</a></button>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="options hidden">
-      <button><a href="index.html">Voltar</a></button>
-
-      <input
-        type="submit"
-        name="submit"
-        value="Enviar Resposta"
-        onClick="result()"
-      />
     </div>
 
     <script type="text/javascript">
