@@ -14,7 +14,7 @@ html {
 
 a {
   text-decoration: none;
-  font-weight: bold;
+  color: white;
 }
 
 header {
@@ -42,7 +42,8 @@ body {
   justify-content: space-around;
 }
 
-button {
+button,
+input[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +56,7 @@ button {
   border-radius: 0.7vh;
   color: white;
   z-index: 4;
+  font-weight: bold;
 }
 
 footer {
