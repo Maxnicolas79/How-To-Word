@@ -69,3 +69,13 @@ footer {
   color: white;
   background-color: #03396c;
 }
+
+.questoes {
+  margin-left: 20px;
+}
+
+input[type="radio"] {
+  height: 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
