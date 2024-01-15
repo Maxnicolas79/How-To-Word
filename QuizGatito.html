@@ -19,86 +19,98 @@
   </head>
   <body>
     <div class="questoes">
-      Q1. Qual respectivo icone é o de "Negrito"<br />
-      <input type="radio" name="question1" id="correct1" /><b>N</b> <br />
-      <input type="radio" name="question1" /><i>I</i> <br />
-      <input type="radio" name="question1" /><u>S</u> <br />
-      <input type="radio" name="question1" /><s>ab</s> <br />
-      <br />
+      <div class="pergunta">
+        Q1. Qual respectivo icone é o de "Negrito"<br />
+        <div class="respostas">
+          <input type="radio" name="question1" class="correct" /><b>N</b> <br />
+          <input type="radio" name="question1" /><i>I</i> <br />
+          <input type="radio" name="question1" /><u>S</u> <br />
+          <input type="radio" name="question1" /><s>ab</s> <br />
+          <br />
 
-      Q2. Qual símbolo corresponde ao "Justificar"<br />
-      <input type="radio" name="question2" /><i
-        class="fa-solid fa-align-right"
-      ></i>
-      <br />
-      <input type="radio" name="question2" /><i
-        class="fa-solid fa-align-left"
-      ></i>
-      <br />
-      <input type="radio" name="question2" id="correct2" /><i
-        class="fa-solid fa-align-justify"
-      ></i>
-      <br />
-      <input type="radio" name="question2" /><i
-        class="fa-solid fa-align-center"
-      ></i>
-      <br />
-      <br />
+          <div class="options">
+            <button>Voltar</button>
+            <button>Próxima Pergunta</button>
+          </div>
+        </div>
+      </div>
 
-      Q3. Qual símbolo é o de "Numeração"?<br />
-      <input type="radio" name="question3" /><i class="fa-solid fa-list-ul"></i>
-      <br />
-      <input type="radio" name="question3" id="correct3" /><i
-        class="fa-solid fa-list-ol"
-      ></i>
-      <br />
-      <input type="radio" name="question3" /><i class="fa-solid fa-font"></i>
-      <br />
-      <input type="radio" name="question3" /><s>ab</s> <br />
-      <br />
+      <div class="pergunta hidden">
+        Q2. Qual símbolo corresponde ao "Justificar"<br />
+        <input type="radio" name="question2" /><i
+          class="fa-solid fa-align-right"
+        ></i>
+        <br />
+        <input type="radio" name="question2" /><i
+          class="fa-solid fa-align-left"
+        ></i>
+        <br />
+        <input type="radio" name="question2" class="correct" /><i
+          class="fa-solid fa-align-justify"
+        ></i>
+        <br />
+        <input type="radio" name="question2" /><i
+          class="fa-solid fa-align-center"
+        ></i>
+        <br />
+      </div>
 
-      Q4. Qual símbolo indica paragráfo?<br />
-      <input type="radio" name="question4" /><i class="fa-solid fa-font"></i>
-      <br />
-      <input type="radio" name="question4" /><i class="fa-solid fa-list-ul"></i>
-      <br />
-      <input type="radio" name="question4" /><i
-        class="fa-solid fa-border-all"
-      ></i>
-      <br />
-      <input type="radio" name="question4" id="correct4" /><i
-        class="fa-solid fa-paragraph"
-      ></i>
-      <br />
-      <br />
+      <div class="pergunta hidden">
+        Q3. Qual símbolo é o de "Numeração"?<br />
+        <input type="radio" name="question3" /><i
+          class="fa-solid fa-list-ul"
+        ></i>
+        <br />
+        <input type="radio" name="question3" class="correct" /><i
+          class="fa-solid fa-list-ol"
+        ></i>
+        <br />
+        <input type="radio" name="question3" /><i class="fa-solid fa-font"></i>
+        <br />
+        <input type="radio" name="question3" /><s>ab</s> <br />
+      </div>
+
+      <div class="pergunta hidden">
+        Q4. Qual símbolo indica paragráfo?<br />
+        <input type="radio" name="question4" /><i class="fa-solid fa-font"></i>
+        <br />
+        <input type="radio" name="question4" /><i
+          class="fa-solid fa-list-ul"
+        ></i>
+        <br />
+        <input type="radio" name="question4" /><i
+          class="fa-solid fa-border-all"
+        ></i>
+        <br />
+        <input type="radio" name="question4" class="correct" /><i
+          class="fa-solid fa-paragraph"
+        ></i>
+        <br />
+      </div>
     </div>
 
-    <div class="options">
+    <div class="options hidden">
+      <button><a href="index.html">Voltar</a></button>
+
       <input
         type="submit"
         name="submit"
         value="Enviar Resposta"
         onClick="result()"
       />
-
-      <button><a href="index.html">Voltar</a></button>
     </div>
 
     <script type="text/javascript">
       function result() {
         var score = 0;
-        if (document.getElementById("correct1").checked) {
-          score++;
-        }
-        if (document.getElementById("correct2").checked) {
-          score++;
-        }
-        if (document.getElementById("correct3").checked) {
-          score++;
-        }
-        if (document.getElementById("correct4").checked) {
-          score++;
-        }
+        var checkboxes = document.querySelectorAll(".correct");
+
+        checkboxes.forEach(function (checkbox) {
+          if (checkbox.checked) {
+            score++;
+          }
+        });
+
         alert("Your score is: " + score);
       }
     </script>

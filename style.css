@@ -27,13 +27,20 @@ header {
   position: static;
   background-color: #011f4b;
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 body {
   font-family: "Comfortaa", cursive;
   line-height: 1.6;
-  min-height: 100vh;
+  min-height: 50vh;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffffff),
+    to(#b3cde0)
+  );
 }
 
 .options {
@@ -62,20 +69,41 @@ input[type="submit"] {
 footer {
   padding: 30px;
   width: 100%;
-  height: 100%;
-  margin-top: 100px;
+  height: 25vh;
+  margin-top: 200px;
   text-align: center;
   position: static;
   color: white;
   background-color: #03396c;
 }
 
-.questoes {
-  margin-left: 20px;
-}
-
 input[type="radio"] {
   height: 15px;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pergunta {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding-left: 20px;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#005b96),
+    to(#6497b1)
+  );
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
