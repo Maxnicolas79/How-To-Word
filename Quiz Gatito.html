@@ -32,9 +32,9 @@ Q1. Qual símbolo é o de "numeração"?<br>
 
 Q1. Qual símbolo que mudaria o paragráfo para esquerda?<br>
 <input type="radio" name="question4" ><i class="fa-solid fa-font"></i> <br>
-<input type="radio" name="question4"id="correct4"><i class="fa-solid fa-list-ul"></i> <br>
+<input type="radio" name="question4"><i class="fa-solid fa-list-ul"></i> <br>
 <input type="radio" name="question4"><i class="fa-solid fa-border-all"></i> <br>
-<input type="radio" name="question4"><i class="fa-solid fa-paragraph"></i> <br>
+<input type="radio" name="question4"id="correct4"><i class="fa-solid fa-paragraph"></i> <br>
 
 <input type="submit" name="submit" value="SubmitQuiz" onClick="result()">
 <script type="text/javascript">
@@ -50,9 +50,10 @@ function result()
 	if(document.getElementById('correct3').checked)
 		{	score++;
 		}
- alert("Your score is:"+score);
- // to print on browser
- // document.write("Your score is:"+score);
+	if(document.getElementById('correct4').checked)
+		{	score++;
+		}
+ alert("Your score is: "+score);
 }
 </script>
 
