@@ -60,7 +60,8 @@ input[type="submit"] {
   height: 10vh;
   background-color: #005b96;
   border: 1px solid transparent;
-  border-radius: 0.7vh;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px -2px rgba(34, 34, 34, 0.4);
   color: white;
   z-index: 4;
   font-weight: bold;
@@ -100,10 +101,15 @@ input[type="radio"] {
     left top,
     right top,
     from(#005b96),
-    to(#6497b1)
+    to(#03396c)
   );
   color: white;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.pergunta button {
+  margin-right: 20px;
+  margin-left: 20px;
 }
