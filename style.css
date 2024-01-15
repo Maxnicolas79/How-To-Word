@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Teko&display=swap");
+
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
@@ -12,7 +14,7 @@ html {
 
 a {
   text-decoration: none;
-  font-weight: bold;
+  color: white;
 }
 
 header {
@@ -28,13 +30,20 @@ header {
   margin-bottom: 100px;
 }
 
+body {
+  font-family: "Comfortaa", cursive;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
 .options {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-button {
+button,
+input[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +56,7 @@ button {
   border-radius: 0.7vh;
   color: white;
   z-index: 4;
+  font-weight: bold;
 }
 
 footer {
